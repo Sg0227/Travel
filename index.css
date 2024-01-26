@@ -66,13 +66,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width:25%;
+    min-width:25%;
     height:inherit;
     /* background: blue; */
 }
-.main .working .navleft img{
+.main .working .navleft .logo{
     height:100%;
-    width: 5vw;
+    width: 7vw;
 }
 .nav .navleft a{
     height:auto;
@@ -92,7 +92,8 @@ body{
     display: flex;
     align-items: center;
     justify-content:space-around;
-    width:25%;
+    min-width:25%;
+    gap:10px;
     padding: 0 5px;
     height:inherit;
     /* border: 2px solid rgba(244, 114, 74); */
@@ -150,8 +151,8 @@ body{
 {
     pointer-events: all;
     cursor: pointer;
-    width:9vw;
-    height:8vh;
+    width:100px;
+    height:60px;
     margin:10px 0;
     font-size: 1.5rem;
     font-family: Oswald;
@@ -166,8 +167,54 @@ button:hover{
     background: #c9d74b;
     transition: all .2s ease-in-out;
 }
-.middleright{
-    background-color: rgb(137, 246, 122);
-    /* height:100%; */
+/* .middleright{
+    background-color:transparent;
+     height:100%;
     min-width:35%;
+} */
+/* ......................................................................................................... */
+
+
+
+/* .........................MEDIA QUERY STARTS HERE....................... */
+
+@media(max-width:962px)
+{
+        .nav .navleft a p{
+            font-size: 1.2rem;
+        }
+        .navright a{
+            font-size: 0.7rem;
+        }
+        .button
+        {
+            line-height: 0.2;
+
+        }
+}
+
+
+@media(max-width:769px)
+{
+    .nav .navleft a p{
+        min-width: 100%;
+    }   
+}
+@media(max-width:376px)
+{
+    .nav .navleft a p
+    {
+        display:none;
+    }
+    .main .working .navleft .logo{
+        width:20vw;
+    }
+
+    .ptags{
+        height: 6vw;
+    }
+    .middleleft .ptags h1{
+        font-size: 6vw;
+    }
+
 }
